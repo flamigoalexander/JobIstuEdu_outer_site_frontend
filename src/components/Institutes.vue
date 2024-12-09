@@ -30,7 +30,6 @@ onBeforeMount(()=>{
     border-radius: 20px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: white;
 }
 
 .block:hover {
@@ -39,6 +38,7 @@ onBeforeMount(()=>{
 }
 
 .Institutes {
+    background-color: #fff;
     margin-top: 1em;
     position: relative;
     width: 15em;
