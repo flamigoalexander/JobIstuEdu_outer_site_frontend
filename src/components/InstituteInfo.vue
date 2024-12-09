@@ -19,8 +19,9 @@
                     </div>
                     <div class="test">
                         <div class="mini1" v-for="(speciality) in bachelor"
-                             v-bind:data-tooltip="speciality.full_name"
-                        >{{ speciality.code }}</div>
+                             v-bind:data-tooltip="speciality.full_name">
+                            <a class="direction_" :href="speciality.url ? speciality.url : null">{{ speciality.code }}</a>
+                        </div>
                     </div>
                     <hr>
                 </div>
@@ -30,8 +31,9 @@
                     </div>
                     <div class="test">
                         <div class="mini2" v-for="(speciality) in magistracy"
-                             v-bind:data-tooltip="speciality.full_name"
-                        >{{ speciality.code }}</div>
+                             v-bind:data-tooltip="speciality.full_name">
+                            <a class="direction_" :href="speciality.url ? speciality.url : null">{{ speciality.code }}</a>
+                        </div>
                     </div>
                     <hr>
                 </div>
@@ -40,9 +42,10 @@
                         Специалитет
                     </div>
                     <div class="test">
-                        <div class="mini3" v-for="(speciality) in specialty"
-                             v-bind:data-tooltip="speciality.full_name"
-                        >{{ speciality.code }}</div>
+                        <div class="mini3" v-for="(speciality) in magistracy"
+                             v-bind:data-tooltip="speciality.full_name">
+                            <a class="direction_" :href="speciality.url ? speciality.url : null">{{ speciality.code }}</a>
+                        </div>
                     </div>
                     <hr>
                 </div>
@@ -51,9 +54,10 @@
                         Другие
                     </div>
                     <div class="test">
-                        <div class="mini4" v-for="(speciality) in other"
-                             v-bind:data-tooltip="speciality.full_name"
-                        >{{ speciality.code }}</div>
+                        <div class="mini4" v-for="(speciality) in magistracy"
+                             v-bind:data-tooltip="speciality.full_name">
+                            <a class="direction_" :href="speciality.url ? speciality.url : null">{{ speciality.code }}</a>
+                        </div>
                     </div>
                 </div>
             </div>
