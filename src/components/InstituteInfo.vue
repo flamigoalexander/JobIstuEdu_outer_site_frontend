@@ -18,10 +18,11 @@
                         Бакалавриат
                     </div>
                     <div class="test">
-                        <div class="mini1" v-for="(speciality) in bachelor"
-                             v-bind:data-tooltip="speciality.full_name">
-                            <a class="direction_" :href="speciality.url ? speciality.url : null">{{ speciality.code }}</a>
-                        </div>
+                        <a class="mini1 direction_link" v-for="(speciality) in bachelor"
+                           :href="speciality.url ? speciality.url : null"
+                           v-bind:data-tooltip="speciality.full_name">
+                            {{ speciality.code }}
+                        </a>
                     </div>
                     <hr>
                 </div>
