@@ -5,8 +5,10 @@
 }
 
 #app {
-    background: #F0F3F8;
+    background: linear-gradient(to bottom, #1e3c72, #2a5298);
     min-height: 100vh;
+    position: relative;
+    z-index: 2;
 }
 
 body {
@@ -15,10 +17,51 @@ body {
     background-color: rgb(245, 245, 245);
     display: flexbox;
     box-sizing: content-box;
-    
-
+    z-index: 1;
+}
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom, #1e3c72, #2a5298);
 }
 
+.snowflake {
+    position: absolute;
+    top: -10px;
+    z-index: -1;
+    color: white;
+    font-size: 1.5em;
+    opacity: 0.8;
+    animation: fall 10s linear infinite, sway 2s ease-in-out infinite;
+}
+
+/* Анимация падения */
+@keyframes fall {
+    0% {
+        top: -10px;
+    }
+    100% {
+        top: 100vh;
+    }
+}
+
+/* Анимация колебаний */
+@keyframes sway {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+}
+.snow {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    animation: snowfall 10s linear infinite;
+}
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -81,28 +124,9 @@ body {
     border-color: transparent;
     margin-bottom: 25px;
 }
-.textInst:hover {
-    background-color: #e7e7e7;
-    
-  }
-  .Institutes:hover {
-    cursor: pointer;
-  }
 
-.textInst {
-    height: 250px;
-    width: 250px;
-    background-color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: left;
-    float: right;
-    font-size: 20px;
-    box-sizing: border-box;
-    border-top-right-radius: 35px;
-    border-bottom-right-radius: 35px;
-    color: black;
 
-}
+
 
 .specText {
     font-size: 12px;
