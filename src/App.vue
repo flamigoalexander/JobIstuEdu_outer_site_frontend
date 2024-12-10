@@ -1,18 +1,25 @@
 <template>
     <HatAll/>
-    <div>
-        <div class="snowflake">❄</div>
-        <div class="snowflake" style="left: 20%; animation-duration: 8s;">❄</div>
-        <div class="snowflake" style="left: 40%; animation-duration: 12s;">❄</div>
-        <div class="snowflake" style="left: 60%; animation-duration: 10s;">❄</div>
-        <div class="snowflake" style="left: 80%; animation-duration: 14s;">❄</div>
+    <div id="snowflakes">
         <RouterView></RouterView>
     </div>
 </template>
 
 <script setup>
 import HatAll from './components/Hat.vue'
-
+function myFunction() {
+    const newShowFlake = document.createElement('div');
+    newShowFlake.textContent = '❄';
+    newShowFlake.className = 'snowflake';
+    newShowFlake.style.left = Math.random() * 100 + '%';
+    newShowFlake.style.animationDuration = Math.random() + 5 + document.body.scrollHeight / 100 +  's'; // Случайная длительность падения (5-8 секунд)
+    newShowFlake.style.fontSize = Math.random() * 5 + 20 + 'px'; // Случайный размер снежинки (10-20px)
+    document.querySelector('#snowflakes').appendChild(newShowFlake);
+    newShowFlake.addEventListener('animationend', () => {
+        newShowFlake.remove();
+    });
+}
+const intervalId = setInterval(myFunction, 1000);
 
 </script>
 
