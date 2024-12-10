@@ -27,7 +27,7 @@ onBeforeMount(()=>{
     display: inline-block;
     margin: 1em;
     text-decoration: none;
-    border-radius: 20px;
+    border-radius: 60px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background: rgba(255, 255, 255, 0.1);
@@ -60,8 +60,8 @@ onBeforeMount(()=>{
     cursor: pointer;
 }
 .textInst {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 5px 10px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px 10px;
     width: 90%;
     height: 20%;
     margin: 10px auto;
@@ -70,12 +70,12 @@ onBeforeMount(()=>{
     font-size: 16px;
     color: #fff;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 40px;
     transition: background-color 0.3s ease-in-out;
 }
 
 .textInst:hover {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.6);
     color: #000;
 }
 
