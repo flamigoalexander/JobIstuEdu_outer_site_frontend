@@ -7,7 +7,7 @@
 
 <script setup>
 import HatAll from './components/Hat.vue'
-function myFunction() {
+function createSnowFlake() {
     const newShowFlake = document.createElement('div');
     newShowFlake.textContent = '❄';
     newShowFlake.className = 'snowflake';
@@ -19,7 +19,7 @@ function myFunction() {
         newShowFlake.remove();
     });
 }
-const intervalId = setInterval(myFunction, 1000);
+const intervalId = setInterval(createSnowFlake, 1000);
 
 </script>
 

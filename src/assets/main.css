@@ -32,7 +32,7 @@ body {
     color: white;
     font-size: 1.5em;
     opacity: 0.8;
-    animation: fall 10s linear infinite, sway 2s ease-in-out infinite;
+    animation: fall 10s linear forwards, sway 2s ease-in-out forwards;
 }
 
 /* Анимация падения */
@@ -41,7 +41,7 @@ body {
         top: -10px;
     }
     100% {
-        top: 100%;
+        top: 95%;
     }
 }
 
