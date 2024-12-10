@@ -5,7 +5,7 @@
 }
 
 #app {
-    background: linear-gradient(to bottom, #1e3c72, #2a5298);
+    background: linear-gradient(to bottom, #122951, #2767d8);
     min-height: 100vh;
     position: relative;
     z-index: 2;
@@ -164,4 +164,36 @@ body {
 .button{
     background-color:  rgb(245, 245, 245);
     border-style: hidden;
+}
+
+#stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Звезды не мешают кликам */
+    z-index: 2; /* Звезды выше снежинок, но ниже основного контента */
+    overflow: hidden;
+}
+
+/* Звезда */
+.star {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: radial-gradient(circle, #fff, rgba(255, 255, 255, 0));
+    border-radius: 50%;
+    animation: twinkle 3s infinite ease-in-out;
+    opacity: 0.8;
+}
+
+/* Анимация мерцания */
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.4;
+    }
 }

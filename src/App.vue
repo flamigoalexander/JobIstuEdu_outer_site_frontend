@@ -1,5 +1,6 @@
 <template>
     <HatAll/>
+    <div id="stars"></div>
     <div id="snowflakes">
         <RouterView></RouterView>
     </div>
@@ -7,6 +8,31 @@
 
 <script setup>
 import HatAll from './components/Hat.vue'
+import {onMounted} from "vue";
+const createStar = () => {
+    const starsContainer = document.getElementById('stars');
+    if (!starsContainer) return;
+
+    const star = document.createElement('div');
+    star.classList.add('star');
+
+    // Случайное расположение звезды
+    star.style.left = `${Math.random() * 100}%`;
+    star.style.top = `${Math.random() * 50}%`; // Ограничиваем только верхнюю часть
+    star.style.width = `${Math.random() * 3 + 2}px`; // Размер от 2 до 5 пикселей
+    star.style.height = '10px';
+    star.style.width = '10px';
+    // Разное время анимации для каждой звезды
+    star.style.animationDuration = `${Math.random() * 2 + 3}s`;
+
+    starsContainer.appendChild(star);
+
+};
+onMounted(() =>{
+    for (let i = 0; i < 20; i++) {
+        createStar();
+    }
+})
 function createSnowFlake() {
     const newShowFlake = document.createElement('div');
     newShowFlake.textContent = '❄';
@@ -43,7 +69,7 @@ const observeScrollHeight = (callback) => {
 
 observeScrollHeight((newHeight) => {
     console.log(newHeight);
-    Array.of(document.querySelectorAll('.snowflake')).forEach((el) => {
+    Array.from(document.querySelectorAll('.snowflake')).forEach((el) => {
         el.innerHTML = '';
     })
 });
