@@ -30,6 +30,7 @@ onBeforeMount(()=>{
     border-radius: 20px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .block:hover {
@@ -41,9 +42,9 @@ onBeforeMount(()=>{
     background-color: #fff;
     margin-top: 1em;
     position: relative;
-    width: 15em;
+    width: 20em;
     height: 12em;
-    background-size: 80%;
+    background-size: 55%;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 15px;
