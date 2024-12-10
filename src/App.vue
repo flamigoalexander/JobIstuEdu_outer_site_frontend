@@ -21,6 +21,32 @@ function createSnowFlake() {
 }
 const intervalId = setInterval(createSnowFlake, 1000);
 
+
+const observeScrollHeight = (callback) => {
+    let lastHeight = document.body.scrollHeight;
+    const observer = new MutationObserver(() => {
+        const newHeight = document.body.scrollHeight;
+
+        if (newHeight !== lastHeight) {
+            lastHeight = newHeight;
+            callback(newHeight);
+        }
+    });
+
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true,
+    });
+
+    return observer;
+};
+
+observeScrollHeight((newHeight) => {
+    console.log(newHeight);
+    Array.of(document.querySelectorAll('.snowflake')).forEach((el) => {
+        el.innerHTML = '';
+    })
+});
 </script>
 
 <style scoped>
