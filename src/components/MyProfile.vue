@@ -94,17 +94,18 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="profile-actions">
-            <button v-if="!isEditing" class="btn btn-primary" @click="isEditing = !isEditing">Редактировать профиль</button>
-            <div class="profile-actions2" v-else>
-                <button class="btn btn-success" @click="saveChanges">Сохранить</button>
-                <button class="btn btn-success2" @click="isEditing = false;">Отмена</button>
+            <div class="profile-actions">
+                <button v-if="!isEditing" class="btn btn-primary" @click="isEditing = !isEditing">Редактировать профиль</button>
+                <div class="profile-actions2" v-else>
+                    <button class="btn btn-success" @click="saveChanges">Сохранить</button>
+                    <button class="btn btn-success2" @click="isEditing = false;">Отмена</button>
+                </div>
+                <RouterLink :to="{ name: 'auth' }">
+                    <button class="btn btn-primary" @click="logOut">Выйти</button>
+                </RouterLink>
             </div>
-            <RouterLink :to="{ name: 'auth' }">
-                <button class="btn btn-primary" @click="logOut">Выйти</button>
-            </RouterLink>
         </div>
+
     </div>
 </template>
 
