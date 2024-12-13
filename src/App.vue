@@ -68,7 +68,6 @@ const observeScrollHeight = (callback) => {
 };
 
 observeScrollHeight((newHeight) => {
-    console.log(newHeight);
     Array.from(document.querySelectorAll('.snowflake')).forEach((el) => {
         el.innerHTML = '';
     })
