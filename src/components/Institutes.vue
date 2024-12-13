@@ -21,6 +21,9 @@ onBeforeMount(()=>{
 </script>
 
 <style scoped>
+a {
+    text-decoration: none;
+}
 .block {
     width: 25em;
     height: 20em;
@@ -58,6 +61,7 @@ onBeforeMount(()=>{
 .Institutes:hover {
     transform: scale(1.05);
     cursor: pointer;
+
 }
 .textInst {
     background: rgba(0, 0, 0, 0.3);
@@ -75,23 +79,25 @@ onBeforeMount(()=>{
 }
 
 .textInst:hover {
-    background: rgba(255, 255, 255, 0.6);
-    color: #000;
+    background: rgba(0, 0, 0, 0.6);
 }
 
 @media (max-width: 768px) {
     .block {
         margin: 1em;
+        width: 25em;
+        height: 17em;
     }
 
     .Institutes {
-        width: 100%;
+        width: 65%;
         height: 150px;
     }
 
     .textInst {
         font-size: 14px;
         padding: 8px;
+
     }
 }
 </style>
