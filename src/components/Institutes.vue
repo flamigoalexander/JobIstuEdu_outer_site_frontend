@@ -85,8 +85,8 @@ a {
 @media (max-width: 768px) {
     .block {
         margin: 1em;
-        width: 25em;
-        height: 17em;
+        max-width: 18em;
+        max-height: 17em;
     }
 
     .Institutes {
