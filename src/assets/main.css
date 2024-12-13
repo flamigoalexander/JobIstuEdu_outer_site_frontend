@@ -9,6 +9,7 @@
     min-height: 100vh;
     position: relative;
     z-index: 2;
+    overflow-x: hidden;
 }
 
 body {
@@ -18,11 +19,14 @@ body {
     display: flexbox;
     box-sizing: content-box;
     z-index: 1;
+    overflow-x: hidden;
+
 }
 body {
     margin: 0;
     height: 100vh;
     background: linear-gradient(to bottom, #1e3c72, #2a5298);
+    overflow-x: hidden;
 }
 
 .snowflake {
